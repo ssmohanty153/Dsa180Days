@@ -102,15 +102,49 @@ abcde
 
 //fifth pattern
 
+/**
+ 
+    1
+   21
+  321
+ 4321
+54321
+
+ */
+// const n = 5;
+
+// for (let row = 1; row <= n; row++) {
+//   let print = "";
+//   for (let spaceColumn = 1; spaceColumn <= n - row; spaceColumn++) {
+//     print += " ";
+//   }
+//   for (let numberColumn = row; numberColumn >= 1; numberColumn--) {
+//     print += numberColumn;
+//   }
+//   console.log(print);
+// }
+
+//6th pattern
+/*
+
+* * * * * 
+*       * 
+*       * 
+*       * 
+* * * * * 
+
+ */
 const n = 5;
 
 for (let row = 1; row <= n; row++) {
   let print = "";
-  for (let spaceColumn = 1; spaceColumn <= n - row; spaceColumn++) {
-    print += " ";
+  for (let column = 1; column <= n; column++) {
+    if (row == 5 || column == 5 || row == 1 || column == 1) {
+      print += "* ";
+    } else {
+      print += "  ";
+    }
   }
-  for (let numberColumn = row; numberColumn >= 1; numberColumn--) {
-    print += numberColumn;
-  }
+
   console.log(print);
 }
